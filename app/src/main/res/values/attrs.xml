@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DashBoard">
+        <!-- Identifier value for the header. -->
+        <attr name="dashId" format="reference"/>
+        <attr name="dashTitle" format="string"/>
+        <attr name="targetClass" format="string"/>
+        <!-- An icon for the item. -->
+        <attr name="dashIcon" format="reference"/>
+        <!-- The summary for the item. -->
+        <attr name="summary" format="string"/>
+        <!-- The fragment that is displayed when the user selects this item. -->
+        <attr name="fragment" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="DividedRecycledView">
+        <attr name="dividerColor" format="color"/>
+        <attr name="dividerHeight" format="dimension"/>
+        <attr name="itemOffset" format="dimension"/>
+        <attr name="drawDividerOnFooter" format="boolean"/>
+    </declare-styleable>
+
+    <attr name="switchBarTheme" format="reference"/>
+    <attr name="switchBarMarginStart" format="dimension"/>
+    <attr name="switchBarMarginEnd" format="dimension"/>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference"/>
+        <attr name="metaButtonBarButtonStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="FlexibleImageView">
+        <attr name="inner_radius" format="dimension"/>
+        <attr name="background_color" format="color"/>
+        <attr name="progress_color_flip" format="color"/>
+        <attr name="progress_stoke_width" format="dimension"/>
+        <attr name="enable_circle_background" format="boolean"/>
+        <attr name="progress" format="integer"/>
+        <attr name="max_flip" format="integer"/>
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>
