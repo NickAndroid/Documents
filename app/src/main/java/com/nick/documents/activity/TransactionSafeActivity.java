@@ -3,10 +3,14 @@ package com.nick.documents.activity;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 public class TransactionSafeActivity extends AppCompatActivity {
+
+    protected Fragment mShowingFragment;
+
     /**
      * Show fragment page by replace the given containerId, if you have data to set
      * give a bundle.
@@ -44,12 +48,12 @@ public class TransactionSafeActivity extends AppCompatActivity {
         if (!animate) {
             getSupportFragmentManager().beginTransaction()
                     .replace(containerId, f).commit();
-            return true;
         } else {
             getSupportFragmentManager().beginTransaction()
                     .replace(containerId, f).commit();
-            return true;
         }
+        mShowingFragment = f;
+        return true;
     }
 
     /**
@@ -79,13 +83,13 @@ public class TransactionSafeActivity extends AppCompatActivity {
 
         if (!animate) {
             getSupportFragmentManager().beginTransaction().remove(f).commit();
-            return true;
         } else {
             getSupportFragmentManager().beginTransaction()
                     .remove(f)
                     .commit();//TODO Ignore the result?
-            return true;
         }
+        mShowingFragment = null;
+        return true;
     }
 
     @Override
